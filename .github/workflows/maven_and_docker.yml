@@ -14,11 +14,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-
-permissions:
-  contents: 'read'
-  id-token: 'write'
-  
 jobs:
   build:
 
@@ -57,4 +52,3 @@ jobs:
       with:
         subject-name: cr.surf.nl/edubadges-edubadges/edubadges/dc-public-validator:latest
         subject-digest: ${{ steps.push-latest.outputs.digest }}
-        push-to-registry: true
